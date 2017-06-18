@@ -1,0 +1,91 @@
+body
+{
+	background-image: url('images/background6.gif');
+	color: #FFFFFF;
+}
+.header
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.skull-l
+{
+}
+.skull-r
+{
+}
+.title
+{
+	/*display: flex;*/
+	font-size: 41px;
+	text-align: center;
+}
+.q
+{
+	padding: 5px;
+	font-size: 30px;
+	font-family: 'VT323', monospace;
+}
+.score
+{
+	position: fixed;
+	top: 6px;
+	right: 5px;
+	font-size: 250px;
+	color: #BF4040;
+	font-family: 'VT323', monospace;
+}
+.ed
+{
+	padding-top: 20px;
+	display: flex;
+	align-items: center;
+	color: #00FB62;
+}
+.res-no img
+{
+	height: 18px;
+}
+.res-yes
+{
+	height: 71px;
+}
+.res-yes
+{
+	position: relative;
+}
+.res-yes img
+{
+	width: 85px;
+	height: 71px;
+	margin: -23px -23px -25px -34px;
+}
+.duke img
+{
+	height: 77px;
+	position: absolute;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+	margin-left: 31px;
+}
+.pointer
+{
+	cursor: pointer;
+}
+.sandra-bullock
+{
+	text-align: right;
+}
+.selected-true
+{
+	color: #1CFF18;
+}
+.selected-false
+{
+	color: #FF1818;
+}

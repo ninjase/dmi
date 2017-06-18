@@ -1,0 +1,56 @@
+<div class="header">
+    <div >
+        <img src="images/explosion.gif">
+    </div>
+    <div class="title">
+        DOGNOSE MOVIE INDEX
+    </div>
+    <div>
+        <img src="images/explosion.gif">
+    </div>
+</div>
+
+<div class="score">
+    {{score}}
+</div>
+
+<div class="q" ng-repeat="item in scoring">
+  {{$index+1}}) {{item.q}}
+  <span ng-if="item.val === 'true' && item.yes < item.no" class="res-no"><img src="images/no.gif"></span>
+  <span ng-if="item.val === 'false' && item.yes > item.no" class="res-no"><img src="images/no.gif"></span>
+  <span ng-if="item.val === 'true' && item.yes > item.no" ng-class="item.id !== 9 ? 'res-yes' : 'duke'"><img ng-if="item.id !== 9" src="images/yes.gif" >
+    <img ng-if="item.id === 9" src="images/duke.gif" >
+  </span>
+  <span ng-if="item.val === 'false'&& item.yes < item.no" class="res-yes"><img src="images/yes.gif" ></span>
+
+  <span ng-if="item.score >=0 && item.val">+</span>{{item.score}}
+  <br>
+  <input class="radio" type="radio" ng-model="item.val" value="true" /> <label ng-click="item.val = 'true'" class="pointer" ng-class="item.val === 'true' ? 'selected-true' : ''"> Yes</label>
+  <input class="radio" type="radio" ng-model="item.val" value="false" /> <label ng-click="item.val = 'false'" class="pointer" ng-class="item.val === 'false' ? 'selected-false' : ''"> No</label>
+
+  <div ng-if="item.yes2 && item.val === 'true'">
+    <div class="blowup-addon">
+        2b) Does a lot of stuff blow up? <span ng-if="item.score2 >=0 && item.val">+</span>{{item.score2}}
+        <span ng-if="item.score2 <= 0 " class="res-no"><img src="images/no.gif"></span>
+        <span ng-if="item.score2 > 0" class="res-yes"><img src="images/yes.gif" ></span>
+        <br>
+        <input class="radio" type="radio" ng-model="item.val2" value="true" /> <label ng-click="item.val2 = 'true'" class="pointer" ng-class="item.val2 === 'true' ? 'selected-true' : ''"> Yes</label>
+        <input class="radio" type="radio" ng-model="item.val2" value="false" /> <label ng-click="item.val2 = 'false'" class="pointer" ng-class="item.val2 === 'false' ? 'selected-false' : ''"> No</label>
+    </div>
+  </div>
+</div>
+
+<div class="ed pointer">
+    <img src="images/Ed209.gif" ng-click="share()"> <marquee>&lt;-- CLICK ED-209 TO SHARE</marquee>
+</div>
+
+<div ng-if="shareMe">
+  <input ng-model=shareMe ng-disabled=true> COPY THIS OK?
+</div>
+
+<div class="pointer" ng-click="reset()">
+  <img src="images/skull.gif" alt="I AM THE RESET SKULL CLICK ME TO RESET!">
+</div>
+<div class="sandra-bullock">
+<span>&Pi;</span>
+</div>
