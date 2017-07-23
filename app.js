@@ -101,7 +101,7 @@ app.controller('dmiCtrl', function($scope, $window, shareRef){
       },
        {
         id: 7,
-        q: 'Do people get fucked up by some crazy ass creatures/monsters?',
+        q: 'Do people get fucked up by some crazy-ass robots/creatures/monsters?',
         yes: 10,
         no: 0
       },
